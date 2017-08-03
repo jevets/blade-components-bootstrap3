@@ -1,4 +1,4 @@
-<a href="{{ $url or '#' }}" class="btn btn-{{ $type or 'default' }} btn-{{ $size or 'sm' }} {{ $classes or '' }}">
+<button type="submit" class="btn btn-{{ $type or 'default' }} btn-{{ $size or 'sm' }} {{ $classes or '' }}">
     @isset ($content)
         {{ $content }}
     @else
@@ -10,4 +10,4 @@
             <i class="fa fa-{{ $icon_right }}"></i>
         @endisset
     @endif
-</a>
+</button>

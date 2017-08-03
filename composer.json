@@ -1,6 +1,7 @@
 {
     "name": "jevets/blade-bootstrap-components",
     "description": "Twitter Bootstrap 3 components Laravel Blade, using @component directive.",
+    "version": "1.0.2",
     "type": "library",
     "authors": [
         {
@@ -9,6 +10,12 @@
         }
     ],
     "require": {
-        "illuminate/view": "^5.4"
+        "illuminate/view": "^5.4",
+        "illuminate/support": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jevets\\BootstrapBlade\\": "src/"
+        }
     }
 }
