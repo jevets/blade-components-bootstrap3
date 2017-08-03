@@ -1,0 +1,14 @@
+{
+    "name": "jevets/blade-bootstrap-components",
+    "description": "Twitter Bootstrap 3 components Laravel Blade, using @component directive.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "stevejamesson",
+            "email": "steve@evendev.com"
+        }
+    ],
+    "require": {
+        "illuminate/view": "^5.4"
+    }
+}
