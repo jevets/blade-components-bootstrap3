@@ -6,7 +6,7 @@ $icon    = isset($icon) ? $icon : null;
     {{ $slot }} 
 
     @if ($icon || $title) 
-        @component('bs::panel.title')
+        @component('bs3::panel.title')
             @if ($icon) 
                 <i class="fa fa-{{ $icon }}"></i>
             @endif

@@ -10,7 +10,7 @@ $footer    = isset($footer) ? $footer : null;
 <div class="panel panel-{{ $type }}">
 
     @if ($heading || $icon || $title)
-        @component('bs::panel.heading')
+        @component('bs3::panel.heading')
             {{ $heading }}
             @slot('icon', $icon)
             @slot('title', $title)
@@ -20,13 +20,13 @@ $footer    = isset($footer) ? $footer : null;
     {{ $slot }}
 
     @if ($body)
-        @component('bs::panel.body')
+        @component('bs3::panel.body')
             {{ $body }}
         @endcomponent
     @endif
 
     @if ($footer)
-        @component('bs::.panel.footer')
+        @component('bs3::.panel.footer')
             {{ $footer }}
         @endcomponent
     @endif
