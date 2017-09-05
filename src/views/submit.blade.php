@@ -1,4 +1,4 @@
-<button type="submit" class="btn btn-{{ $type or 'default' }} btn-{{ $size or 'sm' }} {{ $classes or '' }}">
+<button type="submit" class="btn btn-{{ $type or 'default' }} btn-{{ $size or 'sm' }} {{ $classes or '' }}" {{ isset($disabled) && $disabled ? 'disabled' : '' }} title="{{ $title or '' }}">
     @isset ($content)
         {{ $content }}
     @else

@@ -1,6 +1,6 @@
 <?php 
 
-namespace Jevets\BootstrapBlade;
+namespace Jevets\BladeComponents\Bootstrap3;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,10 +13,10 @@ class LaravelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/views', 'bs');
+        $this->loadViewsFrom(__DIR__.'/views', 'bs3');
 
         $this->publishes([
-            __DIR__.'/views' => resource_path('views/vendor/bs')
+            __DIR__.'/views' => resource_path('views/vendor/bs3')
         ], 'views');
     }
 
