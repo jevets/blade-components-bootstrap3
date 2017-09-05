@@ -1,3 +1,3 @@
-<div class="panel-footer">
+<div class="panel-footer {{ $class or '' }}">
     {{ $slot }}
 </div>
