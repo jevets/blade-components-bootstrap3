@@ -17,5 +17,12 @@
         "psr-4": {
             "Jevets\\BladeComponents\\Bootstrap3\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jevets\\BladeComponents\\Bootstrap3\\LaravelServiceProvider"
+            ]
+        }
     }
 }
