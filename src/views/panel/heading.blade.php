@@ -8,7 +8,7 @@ $icon    = isset($icon) ? $icon : null;
     @if ($icon || $title) 
         @component('bs3::panel.title')
             @if ($icon) 
-                <i class="fa fa-{{ $icon }}"></i>
+                <i class="fa fa-fw fa-{{ $icon }}"></i>
             @endif
             {{ $title }} 
         @endcomponent

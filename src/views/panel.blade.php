@@ -1,9 +1,9 @@
 @php
-$type    = isset($type) ? $type : 'default';
-$heading = isset($heading) ? $heading : null;
-$icon    = isset($icon) ? $icon : null;
-$title   = isset($title) ? $title : null;
-$body    = isset($body) ? $body : null;
+$type      = isset($type) ? $type : 'default';
+$heading   = isset($heading) ? $heading : null;
+$icon      = isset($icon) ? $icon : null;
+$title     = isset($title) ? $title : null;
+$body      = isset($body) ? $body : null;
 $footer    = isset($footer) ? $footer : null;
 @endphp
 
