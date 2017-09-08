@@ -1,3 +1,3 @@
-<div class="panel-body">
-    {{ $slot }}
+<div class="panel-body {{ $class or '' }}">
+    {{ $slot or '' }}
 </div>
