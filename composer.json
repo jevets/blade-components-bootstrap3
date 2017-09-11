@@ -5,9 +5,9 @@
     "type": "library",
     "keywords": [
         "laravel",
-        "bootstrap",
         "blade",
-        "components"
+        "components",
+        "bootstrap"
     ],
     "authors": [
         {
