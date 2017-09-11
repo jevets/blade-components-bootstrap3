@@ -1,8 +1,14 @@
 {
-    "name": "jevets/blade-bootstrap3-components",
-    "description": "Twitter Bootstrap v3.x components for  Laravel Blade",
+    "name": "jevets/blade-components-bootstrap3",
+    "description": "Blade components for Twitter Bootstrap v3.x",
     "version": "1.0.5",
     "type": "library",
+    "keywords": [
+        "laravel",
+        "bootstrap",
+        "blade",
+        "components"
+    ],
     "authors": [
         {
             "name": "stevejamesson",
@@ -15,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Jevets\\BladeComponents\\Bootstrap3\\": "src/"
+            "Jevets\\Blade\\Components\\Bootstrap3\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Jevets\\BladeComponents\\Bootstrap3\\LaravelServiceProvider"
+                "Jevets\\Blade\\Components\\Bootstrap3\\LaravelServiceProvider"
             ]
         }
     }

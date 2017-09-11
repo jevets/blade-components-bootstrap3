@@ -1,6 +1,6 @@
 <?php 
 
-namespace Jevets\BladeComponents\Bootstrap3;
+namespace Jevets\Blade\Components\Bootstrap3;
 
 use Illuminate\Support\ServiceProvider;
 
