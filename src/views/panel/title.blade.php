@@ -1,3 +1,3 @@
 <div class="panel-title">
-    {{ $slot }}
+    {{ $slot or '' }} 
 </div>
