@@ -12,43 +12,22 @@ I'm happy to collaborate; pull requests are quite welcome.
 
 I'm not sure if I'll ever release a stable and well-tested version, since I'll probably end up switching over to Bootstrap 4 soon enough. And I think there are some packages that already offer some Bootstrap 4 blade components, however, I may write my own if I don't like em (haven't checked em out yet).
 
-## Font Awesome
-
-Some of the components assume font-awesome. You may wish to decouple this, but in my projects I generally include font-awesome as a dependency. (Again, feel free to fork it for your own use).
-
-## Example Usage
-
-```blade
-// welcome.blade.php
-
-@component('bs3::panel')
-    Congration, you done it!
-@endcomponent
-```
-
-*[congration?](https://i.imgur.com/DAAN8yB.jpg)*
-
-### As `@include`s
-
-If you don't know, blade components can also be `@include`ed like any other partial. Just send an array with keys named the same as slots. It's quite convenient, especially when you set up your own partials that consume the components, then reference your own partials instead of the packages.
-
-Example:
-
-```blade
-// As a component
-@component('bs3::alert.success')
-    Congration, you done it!
-@endcomponent
-
-// As an include
-@include('bs3::alert', [
-    'slot' => 'Congration, you done it!',
-])
-```
 
 ## Installation
 
 This project isn't on packagist (may never be), so you'll have to `require` from github or just set up a `repositories` array in your `composer.json`.
+
+```json
+"require": {
+    "jevets/blade-components-bootstrap3": "dev-master"
+},
+"repositories": [
+    {
+        "type": "git",
+        "url": "https://github.com/jevets/blade-components-bootstrap3"
+    }
+]
+```
 
 ### Laravel
 
@@ -62,6 +41,73 @@ Just reference the service provider in your `config/app.php`:
 
 ```php
 'providers' => Jevets\Blade\Components\Bootstrap3\LaravelServiceProvider::class,
+```
+
+## Font Awesome
+
+Some of the components assume [font-awesome](http://fontawesome.io/). You may wish to decouple this, but in my projects I generally include font-awesome as a dependency. (Again, feel free to fork it for your own use).
+
+## Usage
+
+```blade
+// As a component
+@component('bs3::alert.success')
+    Congration, you done it!
+@endcomponent
+
+// As an include
+@include('bs3::alert', [
+    'slot' => 'Congration, you done it!',
+])
+```
+
+*[congration?](https://i.imgur.com/DAAN8yB.jpg)*
+
+### Panel example
+
+Check out the `src` directory for more... Easiest way to learn is to just start using it.
+
+```blade
+@component('bs3::panel', ['type' => 'success'])
+    @slot('title', 'My Panel')
+    @slot('body')
+        You are logged in
+    @endslot
+@endcomponent
+
+// renders
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <div class="panel-title">
+            My Panel
+        </div>
+    </div>
+    <div class="panel-body">
+        You are logged in
+    </div>
+</div>
+```
+
+### Label example
+
+```blade
+// .label.label-default
+
+@component('bs3::label')
+    Default label
+@endcomponent
+
+// or you could @include
+
+@include('bs3::label', ['slot' => 'Default label'])
+
+
+// .label.label-primary
+
+@component('bs3::label', ['type' => 'primary'])
+    Primary label
+@endcomponent
 ```
 
 ## Publishing Views

@@ -1,1 +1,1 @@
-<span class="label label-{{ $type or 'default' }}">{{ $text or '' }}</span>
+<span class="label label-{{ $type or 'default' }}">{{ $slot or '' }}</span>
