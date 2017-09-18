@@ -28,7 +28,7 @@ Some of the components assume font-awesome. You may wish to decouple this, but i
 
 *[congration?](https://i.imgur.com/DAAN8yB.jpg)*
 
-### As `@include`s`
+### As `@include`s
 
 If you don't know, blade components can also be `@include`ed like any other partial. Just send an array with keys named the same as slots. It's quite convenient, especially when you set up your own partials that consume the components, then reference your own partials instead of the packages.
 
